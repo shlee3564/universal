@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>유니버셜스튜디오_싱가포르</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script>
+        $(document).ready(function(){
+            
+        //    1300px이상일때 메뉴 (pc기본)
+    $("header #menuBar").hide();
+    $("ul.sub").hide();
+   $("header").mouseenter(function(){
+       $("ul.sub").stop().slideDown();
+       $("#menuBar").stop().slideDown();
+   }) ;
+    $("header").mouseleave(function(){
+       $("ul.sub").stop().slideUp();
+       $("#menuBar").stop().slideUp();
+   }) ;
+        
+        //    768px이상일때 햄버거메뉴
+    $("#m_menu > .hamburger_menu").click(function(){
+       $("#m_menu > #m_bg_menu").css("display","block");
+       $("#m_menu > #m_bg_menu").stop().animate({left:"20%"},500);
+   }) ;
+    $("#m_menu > #m_bg_menu > .m_close").click(function(){
+       $("#m_menu > #m_bg_menu").stop().animate({left:"100%"},500);
+   }) ;
+  
+    
+//      768px이상일때 햄버거메뉴안에 검색버튼
+    
+    $(".m_search_btn").click(function(){
+        $(".m_search").stop().slideToggle();
+    });
+    
+   
+//      768px이상일때 햄버거메뉴의 서브메뉴 슬라이드 업/다운
+    var isOn=0;
+    var current=10;
+    $("#m_menu > #m_bg_menu > .m_btm_menu > ul > li ").click(function(){
+        var i = $(this).index();
+        if (isOn == 1){
+            current = 10;
+        }
+        if (current != i){
+            $("#m_menu > #m_bg_menu > .m_btm_menu > ul > li > .m_sub").stop().slideUp(function(){
+                $("#m_menu > #m_bg_menu > .m_btm_menu > ul > li").css({"background":"url(images/m_menu_down.png) 93% 15px no-repeat", "background-size": "25px 25px"});
+                
+                $("#m_menu > #m_bg_menu > .m_btm_menu > ul > li > a").css({"color":"#1c1c1b", "font-weight":"normal", "font-family":"NanumSquareR"});
+            });
+
+            $("#m_menu > #m_bg_menu > .m_btm_menu > ul > li > a").eq(i).css({"color":"#39528a", "font-weight":"bold", "font-family":"NanumSquareEB"});
+
+            $("#m_menu > #m_bg_menu > .m_btm_menu > ul > li > .m_sub").eq(i).stop().slideDown(function(){
+                $("#m_menu > #m_bg_menu > .m_btm_menu > ul > li").eq(i).css({"background":"url(images/m_menu_up.png) 93% 15px no-repeat", "background-size": "25px 25px"});
+                
+                $("#m_menu > #m_bg_menu > .m_btm_menu > ul > li > a").eq(i).css({"color":"#39528a", "font-weight":"bold", "font-family":"NanumSquareEB"});
+                isOn = 2;
+            });
+        } else {
+             $("#m_menu > #m_bg_menu > .m_btm_menu > ul > li > .m_sub").stop().slideUp(function(){
+                $("#m_menu > #m_bg_menu > .m_btm_menu > ul > li").css({"background":"url(images/m_menu_down.png) 93% 15px no-repeat", "background-size": "25px 25px"});
+                 
+                 $("#m_menu > #m_bg_menu > .m_btm_menu > ul > li > a").eq(i).css({"color":"#1c1c1b", "font-weight":"normal", "font-family":"NanumSquareR"});
+                 isOn= 1;
+            });
+        }
+        current = i;
+    });    
+            
+});
+
+    </script>
+    
+    <link href="https://fonts.googleapis.com/css?family=Teko:300,400,500,600,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bad+Script&display=swap" rel="stylesheet">
+    <link href="css/aos.css" rel="stylesheet">
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <div id="logo">
+                <h1>
+                    <a href="index.html"><img src="images/logo.png" alt="유니버셜 스튜디오 싱가포르 로고"></a>
+                </h1>
+            </div>
+            <div id="menu">
+                <div class="topMenu">
+                    <a href="login.html">로그인</a> | <a href="join.html">회원가입</a>
+                </div>
+                <div class="btmMenu">
+                    <ul class="first clearfix">
+                        <li class="menu"><a href="ride.html">즐길거리</a>
+                            <ul class="sub">
+                                <li><a href="ride.html">놀이기구</a></li>
+                                <li><a href="#">쇼핑</a></li>
+                                <li><a href="#">식당</a></li>
+                                <li><a href="#">이벤트</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu"><a href="ticket.html">티켓</a>
+                            <ul class="sub">
+                                <li><a href="ticket.html">예매</a></li>
+                                <li><a href="#">예매내역</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu"><a href="vip.html">VIP체험</a>
+                            <ul class="sub">
+                                <li><a href="vip.html">VIP혜택</a></li>
+                                <li><a href="#">VIP예약정보</a></li>
+                                <li><a href="#">VIP후기</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu"><a href="schedule.html">방문일정</a>
+                            <ul class="sub">
+                                <li><a href="schedule.html">일정 및 시간</a></li>
+                                <li><a href="#">관광하이라이트</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu"><a href="notice.html">이용가이드</a>
+                            <ul class="sub">
+                                <li><a href="notice.html">공지사항</a></li>
+                                <li><a href="#">파크지도</a></li>
+                                <li><a href="#">교통안내</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div id="m_menu">
+               <div class="hamburger_menu">
+                   <img src="images/hamburger_menu.png" alt="메뉴">
+               </div>
+                <div id="m_bg_menu">
+                    <div class="m_t_menu">
+                        <a href="login.html">로그인</a> | <a href="join.html">회원가입</a>
+                    </div>
+                    <div class="m_search">
+                        <form>
+                            <input type="text" placeholder="검색어를 입력해주세요.">
+                            <input type="button" value="검색">
+                        </form>
+                    </div>
+                    <div class="menu_banner">
+                        <a href="#">
+                            <img src="images/m_menu_banner.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="m_btm_menu">
+                        <ul>
+                            <li><a href="#">즐길거리</a>
+                                <ul class="m_sub">
+                                    <li><a href="ride.html">놀이기구</a></li>
+                                    <li><a href="#">쇼핑</a></li>
+                                    <li><a href="#">식당</a></li>
+                                    <li><a href="#">이벤트</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">티켓</a>
+                                <ul class="m_sub">
+                                    <li><a href="ticket.html">예매</a></li>
+                                    <li><a href="#">예매내역</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">VIP체험</a>
+                                <ul class="m_sub">
+                                    <li><a href="vip.html">VIP혜택</a></li>
+                                    <li><a href="#">VIP예약정보</a></li>
+                                    <li><a href="#">VIP후기</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">방문일정</a>
+                                <ul class="m_sub">
+                                    <li><a href="schedule.html">일정 및 시간</a></li>
+                                    <li><a href="#">관광하이라이트</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">이용가이드</a>
+                                <ul class="m_sub">
+                                    <li><a href="notice.html">공지사항</a></li>
+                                    <li><a href="#">파크지도</a></li>
+                                    <li><a href="#">교통안내</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="m_search_btn">
+                        <img src="images/m_search.png" alt="검색">
+                    </div>
+                    <div class="m_close">
+                        <span>x</span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div id="menuBar">
+            <div id="menu_banner">
+                <a href="#"><img src="images/menu_banner.png" alt="온라인 첫 구매시 10% 할인 광고"></a>
+            </div>
+        </div>
+    </header>
+    
+
+</body>
+</html>

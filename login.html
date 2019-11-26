@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>유니버셜스튜디오_싱가포르 > 로그인</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/login.css">
+    <script src="js/prefixfree.min.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/aos.js"></script>
+    
+    
+    <link href="css/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    
+    <script>
+        $(document).ready(function(){
+           $("header").load("header.html");
+            $("footer").load("footer.html");  
+            
+            
+            $(".login_banner > .banner_hover").hide();
+            $(".login_banner").mouseenter(function(){
+                $(".login_banner > .img_scale > img").css({"filter":"brightness(40%)","transform":"scale(1.2)","transition":"all 0.5s"});
+                $(".login_banner > .banner_hover").stop().fadeIn(500);
+                
+            });
+            $(".login_banner").mouseleave(function(){
+                $(".login_banner > .img_scale > img").css({"filter":"brightness(100%)","transform":"scale(1.1)","transition":"all 0.5s"});
+                $(".login_banner > .banner_hover").stop().fadeOut(500);
+                
+            });
+            
+
+            
+        });
+    </script>
+    
+    
+</head>
+<body>
+  
+  
+        <script>
+               $(document).ready(function(){
+                   
+                   AOS.init({
+                        easing: 'ease-in-out-sine'
+                    });
+                   
+               });
+         </script>
+  
+   
+    <header>
+
+    </header>
+    
+    
+    <div id="keyimage">
+       <div id="menu_navi">
+         <div class="navi_box">
+             <a href="index.html"><img src="images/home.png" alt="홈"></a>
+             /
+             <select name="mainMenu" onchange="location.href=this.value">
+               <option value="login.html" selected>로그인</option>
+                <option value="join.html">회원가입</option>
+            </select>
+         </div>
+     </div>
+        <div class="sub1Title">
+            <h2>로그인</h2>
+            <p>유니버설 스튜디오에서 즐거운 여행되세요 !</p>
+        </div>
+    </div>
+     
+
+    
+    
+    <div id="container">
+        
+        <div id="login">
+            <div class="login_title">
+                <h3>
+                    Login
+                </h3>
+            </div>
+        </div>
+        <div id="login_box">
+            <form action="#">
+                <div class="login_text">
+                    <span>아이디</span>  <input type="text" placeholder="아이디를 입력해 주세요."><br>
+                    <span>비밀번호</span>  <input type="text" placeholder="비밀번호를 입력해 주세요.">
+                </div>
+                <input type="button" value="로그인">
+                <input type="checkbox"> <span>아이디 저장</span>
+                <a href="#">아이디&amp;비밀번호 찾기</a>
+            </form>
+            <div class="login_help">
+                <span>아직 유니버셜 회원이 아니신가요 ?</span>
+                <p>유니버셜 회원이 되시면 온라인 예매가 가능하며 할인된 가격으로 만나보실 수 있습니다.</p>
+                <a href="join.html">회원가입</a>
+            </div>
+            <div class="login_banner">
+               <div class="img_scale">
+                   <img src="images/login_banner.jpg" alt="로그인 배너">
+               </div>
+                <div class="banner_hover">
+                    <span>세서미 스트리트 50주년</span>
+                    <p>
+                        50년의 세서미 스트리트를 축하해주세요 ! <br>
+                        50주년 레이스는 모든 능력의 참가자를 위해 설계되었으며 이 레이스는 1K, 5K 또는 10K로 수행 할 수 있습니다.<br>
+                        지금 바로 등록하세요 !
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+
+        
+         <footer>
+         
+         </footer>
+         
+         <button id="gotoTop"><img src="images/top.png" alt=""></button>
+        <button id="gotoBottom"><img src="images/bottom.png" alt=""></button>
+         
+    </div>
+    
+
+</body>
+</html>

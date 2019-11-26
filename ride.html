@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>유니버셜스튜디오_싱가포르 > 즐길거리 > 놀이기구</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/ride.css">
+    <script src="js/prefixfree.min.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/aos.js"></script>
+    
+    
+    <link href="css/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    
+    <script>
+        $(document).ready(function(){
+           $("header").load("header.html");
+            $("footer").load("footer.html");
+            
+ //      1300px이상일때 sub1 컨텐츠 mouseEnter시 효과 (pc기본) 
+            
+            $("#container>#sub_ride>#ride_box").mouseenter(function(){
+               var i = $(this).index();
+                $("#container>#sub_ride>#ride_box").eq(i-1).css({"transform":"scale(1.05)","transition":"ease 0.5s","box-shadow":"5px 10px 10px 0 lightgray"});
+            });
+            $("#container>#sub_ride>#ride_box").mouseleave(function(){
+                $("#container>#sub_ride>#ride_box").css({"transform":"scale(1.0)","transition":"ease 0.5s","box-shadow":"none"});
+            });
+            
+            
+            $("#container>#sub_ride>#ride_box").eq(5).hide();
+            $("#container>#sub_ride>#ride_box").eq(6).hide();
+            $("#container>#sub_ride>#ride_box").eq(7).hide();
+            $("#container>#sub_ride>#ride_box").eq(8).hide();
+            $("#container>#sub_ride>#ride_box").eq(9).hide();
+            $("#container > #sub_ride > .more").click(function(){
+                $("#container > #sub_ride > .more").hide();
+                $("#container > #sub_ride > .more_box").hide();
+                $("#container>#sub_ride>#ride_box").eq(5).show();
+                $("#container>#sub_ride>#ride_box").eq(6).show();
+                $("#container>#sub_ride>#ride_box").eq(7).show();
+                $("#container>#sub_ride>#ride_box").eq(8).show();
+                $("#container>#sub_ride>#ride_box").eq(9).show();
+            });
+            
+            
+            $("#container>#sub_ride>#ride_box").mouseenter(function(){
+               var i = $(this).index();
+                $("#container>#sub_ride>#ride_box").eq(i-3).css({"transform":"scale(1.05)","transition":"ease 0.5s","box-shadow":"5px 10px 10px 0 lightgray"});
+            });
+            $("#container>#sub_ride>#ride_box").mouseleave(function(){
+                $("#container>#sub_ride>#ride_box").css({"transform":"scale(1.0)","transition":"ease 0.5s","box-shadow":"none"});
+            });
+                                    
+
+            
+        });
+    </script>
+    
+    
+</head>
+<body>
+   
+    <header>
+
+    </header>
+    
+    
+    <div id="keyimage">
+       <div id="menu_navi">
+         <div class="navi_box">
+             <a href="index.html"><img src="images/home.png" alt="홈"></a>
+             /
+             <select name="mainMenu" onchange="location.href=this.value">
+               <option value="ride.html" selected>즐길거리</option>
+                <option value="ticket.html">티켓</option>
+                <option value="vip.html">VIP체험</option>
+                <option value="schedule.html">방문일정</option>
+                <option value="notice.html">이용가이드</option>
+            </select>
+            /
+            <select name="subMenu" onchange="location.href=this.value">
+               <option value="ride.html">놀이기구</option>
+                <option value="#">쇼핑</option>
+                <option value="#">식당</option>
+                <option value="#">이벤트</option>
+            </select>
+         </div>
+     </div>
+        <div class="sub1Title">
+            <h2>놀이기구</h2>
+            <p>짜릿한 승차감과 상상을 초월하는 어트랙션을 즐겨보세요 !</p>
+        </div>
+    </div>
+     
+
+    
+    
+    <div id="container">
+         <div id="sub_ride">
+             
+             <div id="ride_title">
+                 <h3>Ride &amp; Attraction</h3>
+             </div>
+             
+             <div id="ride_box">
+                 <img src="images/sub1Ride1.jpg" alt="Despicable Me Minion Mayhem">
+                 <h4>Despicable Me Minion Mayhem</h4>
+                 <p>미니언이 되고 싶나요 ? Despicable Me Minion Mayhem을 경험하고 딸들과 장난스러운 미니언 Gru와 함께 따뜻하고 짜릿한 승차감을 즐겨보세요 !</p>
+                 <p class="ride_box_btn">
+                     <a href="#">위치보기 &rarr;</a>
+                 </p>
+             </div>
+             <div id="ride_box">
+                 <img src="images/sub1Ride2.jpg" alt="Despicable Me Minion Mayhem">
+                 <h4>Theater with Kung Fu Panda</h4>
+                 <p>쿵푸 팬더가 있는 드림 웍스 극장에 오신걸 환영합니다 ! 최초의 내부 프로젝션 매핑, 360 서라운드 사운드 오디오 및 스위핑 물리 효과를 포함한 최첨단 시각 효과 및 최첨단 기술을 사용하여 완전히 새로운 다중 감각 매력을 느껴보세요 !</p>
+                 <p class="ride_box_btn">
+                     <a href="#">위치보기 &rarr;</a>
+                 </p>
+             </div>
+             <div id="ride_box">
+                 <img src="images/sub1Ride3.jpg" alt="Despicable Me Minion Mayhem">
+                 <h4>King Kong 360 3D</h4>
+                 <p>세계적으로 유명한 킹콩 스튜디오 ! 엄청난 두근거림과 설레임을 경험하게 될 것입니다 35피트 T-렉스와 세계 8대 불가사의 킹콩 사이의 끔찍한 투쟁의 한가운데에 빠져들 준비 되셨나요 ?</p>
+                 <p class="ride_box_btn">
+                     <a href="#">위치보기 &rarr;</a>
+                 </p>
+             </div>
+             <div id="ride_box">
+                 <img src="images/ride3.jpg" alt="Despicable Me Minion Mayhem">
+                 <h4>Super Silly Fun Land</h4>
+                 <p>어서 슈퍼 바보 펀랜드에 놀러오세요 ! 귀여운 미니언들이 친구들을 기다리고있답니다 화려한 테마가 지정된 대화식 미니언에서 영감을받은 야외 공연장은 80가지가 넘는 워터 플레이 기능으로 모든 연령대의 손님을 즐겁게 해줍니다 !</p>
+                 <p class="ride_box_btn">
+                     <a href="#">위치보기 &rarr;</a>
+                 </p>
+             </div>
+             <div id="ride_box">
+                 <img src="images/ride5.jpg" alt="Despicable Me Minion Mayhem">
+                 <h4>Silly Swirly Fun Ride</h4>
+                 <p>바보 같은 소용돌이 타보는거 어떠세요 ? Silly Swirly Fun Ride는 12가지의 독특한 스타일의 승용차에 탑승하여 Super Silly Fun Land 의 360도 전망을 위해 급하강 할꺼니 모두 긴장하세요 !</p>
+                 <p class="ride_box_btn">
+                     <a href="#">위치보기 &rarr;</a>
+                 </p>
+             </div>
+                         
+                    <p class="more"></p>
+                    <div class="more_box"></div>
+                          
+             <div id="ride_box">
+                 <img src="images/sub1Ride6.jpg" alt="Despicable Me Minion Mayhem">
+                 <h4>Flight of the Hippogriff</h4>
+                 <p>해그리드의 호박 패치를 타고 해리포터 세계로 다함께 떠나보아요 ! 해그리드의 오두막을지나 가면 Fang 짖는 소리가 들리고 Hippogriff는 앞다리, 날개 및 거대한 독수리 머리와 몸, 뒷다리 및 말의 꼬리를 가진 마법의 생물을 볼 수 있어요 !</p>
+                 <p class="ride_box_btn">
+                     <a href="#">위치보기 &rarr;</a>
+                 </p>
+             </div>
+             
+             <div id="ride_box">
+                 <img src="images/sub1Ride7.jpg" alt="Despicable Me Minion Mayhem">
+                 <h4>The Simpsons Ride</h4>
+                 <p>가상 현실 롤러 코스터를 타고 The Simpsons으로 좌석을 잡으세요 ! 완전히 새로워진 심슨 애니메이션, 프리쇼 및 대기열 영역을 위해 제작되어 전과 다른 거대함을 느끼실 수 있어요 어서 같이 떠나보아요 ! </p>
+                 <p class="ride_box_btn">
+                     <a href="#">위치보기 &rarr;</a>
+                 </p>
+             </div>
+             
+             <div id="ride_box">
+                 <img src="images/sub1Ride8.jpg" alt="Despicable Me Minion Mayhem">
+                 <h4>Universal’s Animal Actors</h4>
+                 <p>유니버셜의 동물배우들을 아시나요 ? '펫의 비밀스러운 삶'의 여러분이 가장 좋아하는 장면들을 보고, 유니버셜의 동물 배우 쇼에서 독점적인 영화 콘텐츠를 함께 봐요 !</p>
+                 <p class="ride_box_btn">
+                     <a href="#">위치보기 &rarr;</a>
+                 </p>
+             </div>
+             
+             <div id="ride_box">
+                 <img src="images/sub1Ride9.jpg" alt="Despicable Me Minion Mayhem">
+                 <h4>Revenge of the Mummy – The Ride</h4>
+                 <p>어둠 속으로 빠르게 빠져들어 가보실래요 ? 이 놀이기구는 어둠 속으로 시속 45마일의 속도로 빠르게 달려 들어갑니다 들어가보면 벽에 수많은 이집트 상형문자의 실제단어와 고대경고를 볼 수 있어요 !</p>
+                 <p class="ride_box_btn">
+                     <a href="#">위치보기 &rarr;</a>
+                 </p>
+             </div>
+             
+             <div id="ride_box">
+                 <img src="images/sub1Ride10.jpg" alt="Despicable Me Minion Mayhem">
+                 <h4>Transformers : The Ride 3D</h4>
+                 <p>Transformers : 라이드3D는 허구와 현실의 경계를 흐리게 하는 몰입적이고 스릴 넘치는 놀이기구에요 ! 지금까지 본 행성들과는 다른 경험을 만들어줄꺼에요 얼른 이 위대한 전투에 승선할 준비를 하세요 !</p>
+                 <p class="ride_box_btn">
+                     <a href="#">위치보기 &rarr;</a>
+                 </p>
+             </div>
+         </div>
+         
+         <footer>
+         
+         </footer>
+         
+         <button id="gotoTop"><img src="images/top.png" alt=""></button>
+        <button id="gotoBottom"><img src="images/bottom.png" alt=""></button>
+         
+    </div>
+    
+
+</body>
+</html>
